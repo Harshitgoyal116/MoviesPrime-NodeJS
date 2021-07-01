@@ -1,0 +1,57 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="./img/logo.PNG" alt="" width="100px" >
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link <%= current == 'home' ? 'active' : '' %>" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= current == 'bollywood' ? 'active' : '' %>" href="/bollywood">Bollywood</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= current == 'hollywood' ? 'active' : '' %>" href="/hollywood">Hollywood</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= current == 'south' ? 'active' : '' %>" href="/south">South</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= current == 'web-series' ? 'active' : '' %>" href="/web-series">Web Series</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action Movies</a></li>
+              <li><a class="dropdown-item" href="#">Adult Movies</a></li>
+              <li><a class="dropdown-item" href="#">Animated Movies</a></li>
+              <li><a class="dropdown-item" href="#">Comedy Movies</a></li>
+              <li><a class="dropdown-item" href="#">Drama Movies</a></li>
+              <li><a class="dropdown-item" href="#">Fantasy Movies</a></li>
+              <li><a class="dropdown-item" href="#">Horror Movies</a></li>
+              <li><a class="dropdown-item" href="#">Kids Movies</a></li>
+              <li><a class="dropdown-item" href="#">Motivational Movies</a></li>
+              <li><a class="dropdown-item" href="#">Romantic Movies</a></li>
+              <li><a class="dropdown-item" href="#">Sci-Fi Movies</a></li>
+              <li><a class="dropdown-item" href="#">Thriller Movies</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">All Movies List</a></li>
+            </ul>
+          </li> -->
+        </ul>
+        <form class="d-flex" action="/search" method="POST">
+          <input class="form-control me-2 search-input" type="search" placeholder="Search movies" name="search" aria-label="Search">
+          <button class="btn btn-outline-light search-btn" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<!-- navbar -->
+<br><br><br><br><br>

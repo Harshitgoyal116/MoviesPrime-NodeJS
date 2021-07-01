@@ -1,0 +1,48 @@
+<%- include("partials/header"); -%>
+<%- include("partials/admin-navbar"); -%>
+<h1 class="text-center top-heading">Dashboard</h1>
+<!-- Cards -->
+<div class="row container-sm mx-auto">
+    <div class="col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add New Movies</h5>
+          <hr>
+          <p class="card-text">You can add new movies here. Click the button below.</p>
+          <a href="/admin/movies-mgt" class="btn btn-outline-light admin-panel-btn"><i class="fas fa-video fa-5x"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Add New User</h5>
+          <hr>
+          <p class="card-text">You can add new User. This user can also access the admin panel.</p>
+          <a href="/admin/users" class="btn btn-outline-light admin-panel-btn"><i class="fas fa-user fa-5x"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Update Your Profile</h5>
+          <hr>
+          <p class="card-text">You can update your profile here. Click the button below.</p>
+          <a href="/admin/profile" class="btn btn-outline-light admin-panel-btn"><i class="fas fa-id-card-alt fa-5x"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Sign out</h5>
+          <hr>
+          <p class="card-text">This module help you to make logout safely and no other user can access your account.</p>
+          <a href="/admin/sign-out" class="btn btn-outline-light admin-panel-btn"><i class="fas fa-sign-out-alt fa-5x"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Cards -->
+<%- include("partials/footer"); -%>

@@ -1,0 +1,53 @@
+[{
+  "_id": {
+    "$oid": "60d392632f24150e50eaa803"
+  },
+  "name": "Scam 1992",
+  "link": "http://download1348.mediafire.com/diaknoxaezbg/ph0tzadxap1wxih/scam+1992+sony+liv+web+series.rar",
+  "image": "file_1624532509819.jpg",
+  "year": "2020",
+  "category": "Drama",
+  "type": "web-series",
+  "description": "The Harshad Mehta Story is an Indian financial thriller streaming television series on SonyLIV directed by Hansal Mehta, with Jai Mehta serving as the co-director.",
+  "__v": 0,
+  "language": "Hindi"
+},{
+  "_id": {
+    "$oid": "60d3a3661112443cd4e1035f"
+  },
+  "name": "Sherni",
+  "link": "https://download854.mediafire.com/6tfgje16ki9g/0bn6lt36kg1dzuf/Sherni+2021+Hindi+720p+AMZN+WEBRip+AAC+5.1+ESubs+x264+-+LOKiHD+-+Telly.mkv",
+  "image": "file_1624482662259.jpg",
+  "year": "2021",
+  "category": "Drama",
+  "type": "bollywood",
+  "description": "A jaded forest officer (Vidya Balan) leads a team of trackers and locals intending to capture an unsettled tigress, while battling intense obstacles and pressures, both natural and man-made.",
+  "__v": 0,
+  "language": "Hindi"
+},{
+  "_id": {
+    "$oid": "60d409e39979de243ccd03c1"
+  },
+  "name": "Wonder Women 1984",
+  "link": "https://download1979.mediafire.com/cmevukeu2geg/k6a03if64bq37rh/Wonder+Woman+1984+-+2020+WebRip+720p+IMAX+%5BHindi+Cam+2.0+%2B+English+5.1%5D+AAC+x264+ESub+-+mkvCinemas+%5BTelly%5D.mkv",
+  "image": "file_1624508899754.jpg",
+  "year": "2020",
+  "category": "Action",
+  "type": "hollywood",
+  "description": "Set in 1984 during the Cold War, the film follows Diana and her past love Steve Trevor as they face off against Max Lord and Cheetah. Discussion of a sequel began shortly after the release of the first film in June 2017",
+  "__v": 0,
+  "language": "Hindi, English"
+},{
+  "_id": {
+    "$oid": "60d4bd55ab5eef3128f2e87c"
+  },
+  "name": "Kalki",
+  "link": "https://www.mediafire.com/file/0xwefx4ljgjq45p/KALKI+(2020)+South+movie+Hindi+dubbed.mp4/file",
+  "image": "file_1624554837876.jpg",
+  "language": "Hindi",
+  "year": "2019",
+  "category": "Action",
+  "type": "south",
+  "description": "Kalki is a 2019 Indian Malayalam-language action crime film directed by Praveen Prabharam, co-written by Praveen Prabharam and Sujin Sujathan, and produced by Suvin K. Varkey and Prasobh Krishna for their studio Little Big Films.",
+  "__v": 0
+}]

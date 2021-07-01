@@ -1,0 +1,196 @@
+<%- include("partials/header"); -%>
+<%- include("partials/admin-navbar"); -%>
+
+
+<h1 class="text-center top-heading">Profile</h1>
+
+<!-- Display Error -->
+<% if(messages.error){ %>
+  <div class="alert alert-danger alert-dismissible fade show container" role="alert">
+    <strong>Error!</strong> <%= messages.error %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% } %>
+<!-- Display Error -->
+
+<!-- Display Success -->
+<% if(messages.success){ %>
+  <div class="alert alert-success alert-dismissible fade show container" role="alert">
+    <strong>Success!</strong> <%= messages.success %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% } %>
+<!-- Display Success -->
+
+<!-- Cards -->
+<div class="row container-sm mx-auto">
+  <div class="col-md-6 mb-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Change Password</h5>
+        <hr>
+        <p class="card-text">You can change your password here by clicking the button below.</p>
+        <a href="#" class="btn btn-outline-light admin-panel-btn" data-bs-toggle="modal" data-bs-target="#changePasswordModal"><i class="fas fa-key fa-5x"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mb-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Change your Name</h5>
+        <hr>
+        <p class="card-text">You can Change your name here by clicking the button below.</p>
+        <a href="#" class="btn btn-outline-light admin-panel-btn" data-bs-toggle="modal" data-bs-target="#changeNameModal" onclick="editName('<%=JSON.stringify(user)%>')"><i class="fas fa-user fa-5x"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mb-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Delete Account</h5>
+        <hr>
+        <p class="card-text">You can permenently deactivate your account by clicking the button below.</p>
+        <a href="#" class="btn btn-outline-light admin-panel-btn" data-bs-toggle="modal" data-bs-target="#deleteAccountModal" onclick="deleteUser('<%=JSON.stringify(user)%>')"><i class="fas fa-user-slash fa-5x"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mb-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Go to Dashboard</h5>
+        <hr>
+        <p class="card-text">Go back to Dashboard by clicking the button below.</p>
+        <a href="/admin/dashboard" class="btn btn-outline-light admin-panel-btn"><i class="fas fa-tachometer-alt fa-5x"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Cards -->
+
+<!--Change Password Modal Bootstarp -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+            <button type="button" class="btn-close btn-outline-light btn-white" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="/admin/profile/change_password" method="POST">
+                <input type="hidden" name="dbId" class="dbId">
+
+                <div class="mb-3">
+                    <label for="newPassword" class="form-label">New Password</label>
+                    <input type="password" class="form-control" id="password"
+                        name="password" placeholder="Enter New password"
+                        autocomplete="off">
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="cpassword"
+                        name="cpassword" placeholder="Confirm your password"
+                        autocomplete="off">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input checkbox" id="exampleCheck1"
+                        onclick="isPassandcpassVisible()">
+                    <label class="form-check-label" for="exampleCheck1">Show
+                        Password</label>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                        <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-outline-light">Save Password</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+</div>
+<!--Change password Modal Bootstarp -->
+
+<!--Change Name Modal Bootstarp -->
+<div class="modal fade" id="changeNameModal" tabindex="-1"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Change Name</h5>
+            <button type="button" class="btn-close btn-outline-light btn-white" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="/admin/profile/change_name" method="POST">
+                <input type="hidden" name="userId" class="userId">
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control user_name" id="name"
+                        name="name" placeholder="Enter New Name"
+                        autocomplete="off">
+                </div>
+                <div class="modal-footer">
+                    <div>
+                        <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-outline-light">Save Change</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+</div>
+<!--Change Name Modal Bootstarp -->
+
+<!-- Delete Modal Bootstarp -->
+<div class="modal fade" id="deleteAccountModal" tabindex="-1"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <form action="/admin/profile/delete_account" method="POST">
+                <h3>Delete Account</h3>
+                <hr>
+                <h5> <span class="userName"></span>, Do you want to delete your account
+                    permanently?</h5>
+                <br>
+                <input type="hidden" name="userId" class="userId" />
+                <button type="button" class="btn btn-secondary"
+                    data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-outline-light">Delete permanently</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Delete Modal Bootstarp -->
+
+
+<script src="/js/password.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+      function deleteUser(Data) {
+          const user = JSON.parse(Data.replace("\\", "\/"));
+          $(".userId").val(user._id);
+          $(".userName").text(user.name);
+      }
+
+      function editName(Data) {
+          const user = JSON.parse(Data.replace("\\", "\/"));
+          $(".userId").val(user._id);
+          $(".user_name").val(user.name);
+      }
+  </script>
+
+
+<%- include("partials/footer"); -%>

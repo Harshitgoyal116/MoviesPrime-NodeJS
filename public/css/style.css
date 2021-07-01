@@ -1,0 +1,158 @@
+body{
+    background-color: #212529 !important;
+    color: #fff !important;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.navbar{
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.search-input{
+    background-color: #212529 !important;
+    border-color: #8197a4 !important;
+    border-radius: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    font-size: 14px !important;
+    color: #fff !important;
+}
+
+.search-input:hover{
+    border-color: rgb(196, 195, 195) !important;
+}
+
+.search-input:focus{
+    box-shadow: none !important;
+}
+
+.search-btn{
+    border-color: #8197a4 !important;
+    color: #8197a4 !important;
+}
+
+.search-btn:hover{
+    color: rgb(196, 195, 195) !important;
+    border-color: rgb(196, 195, 195) !important;
+    background-color: transparent !important;
+}
+
+.search-btn:focus{
+    box-shadow: none !important;
+}
+
+.top-heading{
+    font-family: 'Odibee Sans', cursive;
+}
+
+.bg-dark-light{
+    background-color: #e2e2e2 !important;
+}
+
+.card-text{
+    font-size: 14px;
+}
+
+.welcome-text{
+    padding: 5px 10px;
+}
+
+/*
+ * Admin Login Page css 
+ */
+
+.login-form{
+    margin-bottom: 35px;
+    margin-top: 30px;
+}
+
+.my-login-form{
+    margin-top: 23px;
+    border: 1px solid rgb(196,196,196);
+    padding: 23px;
+    border-radius: 8px;
+}
+
+.input-field:focus{
+     box-shadow: none !important;
+     outline: none !important;     
+}
+
+.checkbox{
+     background-color: #212529 !important;
+     border-color: rgb(196,196,196) !important;
+}
+
+.checkbox:focus{
+     box-shadow: none !important; 
+}
+
+.checkbox + label {
+    cursor: pointer;
+}
+
+.checkbox:checked {
+    background-color: #212529 !important;
+ }
+
+.admin-heading{
+    margin-top: 23px;
+}
+
+ @media only screen and (max-width: 600px) {
+     .login-form{
+         margin-top: 0px;
+         margin-bottom: 0px;
+     }
+ }
+
+  /**
+   * Admin dashboard panel
+ **/
+
+.card-body{
+    color: #212529;
+    text-align: center;
+}
+
+.admin-panel-btn{
+    border: 1px dotted #212529 !important;
+    color: rgb(196,196,196) !important;
+    transition: 0.3s;
+}
+.admin-panel-btn:hover{
+    color: #212529 !important;
+}
+
+/**
+  * Admin Movies management
+**/
+
+.action-btn i{
+    cursor: pointer;
+}
+
+.action-btn i:hover{
+    color: rgb(196,196,196);
+}
+
+.modal-body, .modal-header, .modal-footer{
+    background-color: #212529;
+}
+.form-control{
+    background-color: rgb(196,196,196);
+}
+
+.form-control:focus{
+    box-shadow: none !important;
+}
+
+.btn-white{
+    color: rgb(196,196,196) !important;
+    border: 1px solid white !important;
+}
+
