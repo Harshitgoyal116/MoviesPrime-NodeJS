@@ -95,7 +95,7 @@ function init(passport){
             if(match){
             return done(null, user, {message: "Logged in successfully!"});
         }
-        return done(null, false, {message: "Invali Credentials!"});
+        return done(null, false, {message: "Invalid Credentials!"});
     }).catch((err)=>{
             return done(null, false, {message: "Something went wrong!"});
         });
